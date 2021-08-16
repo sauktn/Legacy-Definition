@@ -1,0 +1,42 @@
+<div class="container background-forum">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <!-- POST -->
+
+            <div class="row post">
+                <div class="wrap-ut pull-left">
+                    <div class="userinfo pull-left">
+                        <div class="avatar">
+                            <img src="{{people.avatar}}" alt="" />
+                            <div class="status green">&nbsp;</div>
+                        </div>
+
+                        <div class="icons">
+                            <span *ngFor="let item of people.icon" >
+                                <img src="{{item}}" alt="" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="posttext pull-left">
+                        <h2><a href="02_topic.html">{{people.topic}}</a></h2>
+                        <p>{{people.description}}</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="postinfo pull-left">
+                    <div class="comments">
+                        <div class="commentbg">
+                            {{people.messages}}
+                            <div class="mark"></div>
+                        </div>
+
+                    </div>
+                    <div class="views"><i class="fa fa-eye"></i> {{people.viewNumber | number}}</div>
+                    <div class="time"><i class="fa fa-clock-o"></i> {{people.time}} {{people.timeAway}}</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- POST -->
+        </div>
+    </div>
+</div>

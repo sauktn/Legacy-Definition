@@ -1,0 +1,15 @@
+<section class="content">
+    <app-page-dashboard></app-page-dashboard>
+    <div *ngIf="listPeople.length > 0; else noPeople">
+        <ul class="task-card">
+            <li *ngFor="let people of listPeople">
+                <app-task-card [people]="people"></app-task-card>
+            </li>
+        </ul>
+    </div>
+    <ng-template #noPeople>
+        No Record to Show!
+    </ng-template>
+
+    <app-page-dashboard></app-page-dashboard>
+</section>
