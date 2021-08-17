@@ -7,17 +7,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { ForumCenterComponent } from './forum-center/forum-center.component';
 import { FooterComponent } from './footer/footer.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderModule } from './header/header.module';
 import {DropdownModule} from "ngx-dropdown";
 import { ForumCenterModule } from './forum-center/forum-center.module';
+import { ArticleComponent } from './article/article.component';
+import { SimpleRedditComponent } from './simple-reddit/simple-reddit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
         ForumCenterComponent,
-        FooterComponent
+        FooterComponent,
+        ArticleComponent,
+        SimpleRedditComponent
     ],
     imports: [
         BrowserModule,
@@ -26,7 +31,10 @@ import { ForumCenterModule } from './forum-center/forum-center.module';
         FontAwesomeModule,
         HeaderModule,
         DropdownModule,
-        ForumCenterModule
+        ForumCenterModule,
+        FormsModule,
+        ReactiveFormsModule,
+        FontAwesomeModule
     ],
     providers: [],
     bootstrap: [AppComponent]

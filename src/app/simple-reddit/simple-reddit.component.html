@@ -1,0 +1,19 @@
+<form (ngSubmit)="submitMethod(refForm)" #refForm="ngForm" class="panel panel-default">
+    <div class="panel-heading">
+      <div>Add a Link</div>
+    </div>
+    <div class="panel-body">
+      <div>
+        <label for="title">Title:</label><br/>
+
+        <span><input required ngModel name="title" #title="ngModel" name="title" [ngStyle]="{'border': title.valid ? '' : '1px #a94442 solid'}"/> <span class="danger" *ngIf="!title.valid">Title is requied!</span> </span>
+
+      </div>
+      <div>
+        <label for="link">Link:</label><br/>
+        <span><input required ngModel name="link" #link="ngModel" name="link" [ngStyle]="{'border': link.valid ? '' : '1px #a94442 solid'}"/> <span class="danger" *ngIf="!link.valid">Link is requied!</span> </span>
+
+      </div>
+    </div>
+    <button class="btn btn-success" [disabled]="!refForm.valid">Submit link</button>
+  </form>
